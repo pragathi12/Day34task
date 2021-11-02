@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd" >
+
+<beans>
+
+
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds">
+
+<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName"/>
+
+<property value="jdbc:oracle:thin:@localhost:1521:xe" name="url"/>
+
+<property value="pragathi" name="username"/>
+
+<property value="pragathi" name="password"/>
+
+</bean>
+
+
+<bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbctemp">
+
+<property name="dataSource" ref="ds"/>
+
+</bean>
+
+
+<bean class="com.java.spr.AgentDAO" id="agentDao">
+
+<property name="jdbcTemplate" ref="jdbctemp"/>
+
+</bean>
+
+</beans>

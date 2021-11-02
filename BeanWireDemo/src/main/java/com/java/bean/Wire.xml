@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd" >
+
+<beans>
+
+
+<bean class="com.java.bean.Student" id="studentone">
+
+<property value="1" name="sno"/>
+
+<property value="pragathi" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="pizza" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+
+
+<bean class="com.java.bean.Student" id="studenttwo">
+
+<property value="2" name="sno"/>
+
+<property value="divya" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="toffee" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+
+
+<bean class="com.java.bean.Student" id="studentthree">
+
+<property value="3" name="sno"/>
+
+<property value="tejas" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="burger" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+<bean class="com.java.bean.Student" id="studentfour">
+
+<property value="4" name="sno"/>
+
+<property value="hitesh" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="chips" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+<bean class="com.java.bean.Student" id="studentfive">
+
+<property value="5" name="sno"/>
+
+<property value="pooja" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="samosa" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+<bean class="com.java.bean.Student" id="studentsix">
+
+<property value="6" name="sno"/>
+
+<property value="bharath" name="name"/>
+
+
+<property name="lunchbox">
+
+
+<bean class="com.java.bean.LunchBox">
+
+<property value="kachori" name="snacks"/>
+
+</bean>
+
+</property>
+
+</bean>
+
+
+<bean class="com.java.bean.Faculty" id="faculty">
+
+<property value="akanksha" name="fname"/>
+
+
+<property name="students">
+
+
+<list>
+
+<ref bean="studentone"/>
+
+<ref bean="studenttwo"/>
+
+<ref bean="studentthree"/>
+<ref bean="studentfour"/>
+<ref bean="studentfive"/>
+<ref bean="studentsix"/>
+
+</list>
+
+</property>
+
+</bean>
+
+</beans>

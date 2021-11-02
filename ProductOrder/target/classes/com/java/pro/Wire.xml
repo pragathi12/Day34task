@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd" >
+
+<beans>
+
+
+<bean class="com.java.pro.Product" id="p1">
+
+<property value="TV" name="product"/>
+
+<property value="50000" name="price"/>
+
+<property value="10" name="quantityavail"/>
+
+</bean>
+
+
+<bean class="com.java.pro.Product" id="p2">
+
+<property value="Laptop" name="product"/>
+
+<property value="42000" name="price"/>
+
+<property value="20" name="quantityavail"/>
+
+</bean>
+<bean class="com.java.pro.Product" id="p3">
+
+<property value="Mobile" name="product"/>
+
+<property value="43000" name="price"/>
+
+<property value="30" name="quantityavail"/>
+
+</bean>
+<bean class="com.java.pro.Product" id="p4">
+
+<property value="PlayStation" name="product"/>
+
+<property value="80000" name="price"/>
+
+<property value="10" name="quantityavail"/>
+
+</bean>
+
+<bean class="com.java.pro.Order" id="b1">
+
+<property value="001" name="orderid"/>
+
+<property value="6" name="qtyord"/>
+
+<property name="objproduct" ref="p1"/>
+
+</bean>
+
+
+<bean class="com.java.pro.Order" id="b2">
+
+<property value="002" name="orderid"/>
+
+<property value="5" name="qtyord"/>
+
+<property name="objproduct" ref="p2"/>
+
+</bean>
+
+
+<bean class="com.java.pro.Order" id="b3">
+
+<property value="003" name="orderid"/>
+
+<property value="15" name="qtyord"/>
+
+<property name="objproduct" ref="p1"/>
+
+</bean>
+<bean class="com.java.pro.Order" id="b4">
+
+<property value="004" name="orderid"/>
+
+<property value="7" name="qtyord"/>
+
+<property name="objproduct" ref="p4"/>
+
+</bean>
+<bean class="com.java.pro.Order" id="b5">
+
+<property value="005" name="orderid"/>
+
+<property value="8" name="qtyord"/>
+
+<property name="objproduct" ref="p3"/>
+
+</bean>
+
+
+<bean class="com.java.pro.OrderLogic" id="orderlogic">
+
+
+<property name="items">
+
+
+<list>
+
+<ref bean="b1"/>
+
+<ref bean="b2"/>
+
+<ref bean="b3"/>
+<ref bean="b4"/>
+<ref bean="b5"/>
+
+</list>
+
+</property>
+
+</bean>
+
+</beans>
